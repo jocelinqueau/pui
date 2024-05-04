@@ -17,7 +17,7 @@ import { Popover as PopoverPrimitive } from "@radix-ui/themes";
 import { forwardRef } from "react";
 
 export default {
-  title: "popover/radix",
+  title: "Popover/radix",
   component: Popover,
 };
 type Story = StoryObj<typeof Popover>;

@@ -8,7 +8,7 @@ interface PopoverTriggerProps
   extends ComponentPropsWithout<typeof PopoverPrimitive.Trigger, RemovedProps> {}
 
 interface PopoverProps {
-  trigger:  React.ForwardRefExoticComponent<PopoverTriggerProps & React.RefAttributes<HTMLButtonElement>>
+  trigger: React.ForwardRefExoticComponent<PopoverTriggerProps & React.RefAttributes<HTMLButtonElement>>
   content: React.ReactNode;
 }
 
