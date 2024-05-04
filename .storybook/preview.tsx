@@ -1,4 +1,10 @@
+import React from "react";
+
 import type { Preview } from "@storybook/react";
+
+import { Theme, Reset } from '@radix-ui/themes';
+
+import "@/index.css";
 
 const preview: Preview = {
   parameters: {
@@ -9,6 +15,15 @@ const preview: Preview = {
       },
     },
   },
+  decorators: [
+    (Story) => (
+      <Theme>
+        <Reset>
+          <Story />
+        </Reset>
+      </Theme>
+    )
+  ]
 };
 
 export default preview;
