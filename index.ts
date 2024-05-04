@@ -1,2 +1,2 @@
-export {FloatingPopover, RadixPopover} from './packages/_react'
-export * from './packages/_svelte'
+export {FloatingPopover, RadixPopover, RadixTooltip } from './packages/_react'
+export {SveltePopover} from './packages/_svelte'

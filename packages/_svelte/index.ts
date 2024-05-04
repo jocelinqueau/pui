@@ -1,2 +1,1 @@
-const foo = 'foo';
-export { foo };
+export {default as SveltePopover} from './components/popper/popper.svelte'

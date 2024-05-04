@@ -16,6 +16,12 @@
   let contentAvoidCollisions: boolean = true;
 
   let open = false;
+  let content = "Popover content";
+  let trigger = "Click me";
+
+  $: {
+    console.log('open', open)
+  }
 </script>
 
 <div class="grid place-items-center">
@@ -23,7 +29,12 @@
     <Popper.Anchor
       class="rounded-md bg-white px-4
 			py-2 font-medium leading-none text-vermilion-800 shadow-lg hover:bg-vermilion-100"
-      on:click={() => (open = true)}>Open</Popper.Anchor
+      on:click={() => {
+        console.log('click')
+        open = true
+      }}>
+      {trigger}
+      </Popper.Anchor
     >
     {#if open}
       <Popper.Content
@@ -38,7 +49,9 @@
         hideWhenDetached={contentHideWhenDetached}
         avoidCollisions={contentAvoidCollisions}
       >
-        <button on:click={() => (open = false)}>close</button>
+        <div on:click={() => (open = false)}>
+          {content}
+        </div>
         {#if arrow}
           <Popper.Arrow
             width={arrowWidth}
