@@ -1,2 +1,2 @@
-export * as _react from './packages/react'
-export * as _svelte from './packages/svelte'
+export {FloatingPopover, RadixPopover} from './packages/_react'
+export * from './packages/_svelte'
