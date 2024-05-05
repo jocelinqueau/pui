@@ -6,10 +6,15 @@
   "main": "./index.ts",
   "workspaces": [
     "packages/_react",
-    "packages/_svelte"
+    "packages/_svelte",
+    "packages/_html"
   ],
   "scripts": {
     "storybook:react": "npm run -w packages/_react storybook",
-    "storybook:svelte": "npm run -w packages/_svelte storybook"
+    "storybook:svelte": "npm run -w packages/_svelte storybook",
+    "storybook:html": "npm run -w packages/_html storybook"
+  },
+  "dependencies": {
+    "open-props": "^1.7.4"
   }
 }

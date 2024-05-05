@@ -1,0 +1,106 @@
+@import "open-props/style";
+
+:root {
+  /* @link https://utopia.fyi/type/calculator?c=320,18,1.2,1140,22,1.25,5,2,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,2xl,12 */
+  /* min 2.7994 * 16 = 45, max: 4.1962 * 16 = 67 */
+  --font-size-2xl: clamp(2.7994rem, 2.2543rem + 2.7255vi, 4.1962rem);
+  /* min 2.3328 * 16 = 37, max: 3.3569 * 16 = 54 */
+  --font-size-xl: clamp(2.3328rem, 1.9331rem + 1.9983vi, 3.3569rem);
+  /* min 1.944 * 16 = 31, max: 2.6855 * 16 = 43 */
+  --font-size-lg: clamp(1.944rem, 1.6546rem + 1.4469vi, 2.6855rem);
+  /* min 1.62 * 16 = 26, max: 2.1484 * 16 = 34 */
+  --font-size-md: clamp(1.35rem, 1.2061rem + 0.7195vi, 1.7188rem);
+  /* min 1.125 * 16 = 18, max: 1.375 * 16 = 22 */
+  --font-size-base: clamp(1.125rem, 1.0274rem + 0.4878vi, 1.375rem);
+  /* min 0.9375 * 16 = 15, max: 1.1 * 16 = 18 */
+  --font-size-sm: clamp(0.9375rem, 0.8741rem + 0.3171vi, 1.1rem);
+  /* min 0.7813 * 16 = 12, max: 0.88 * 16 = 14 */
+  --font-size-xsm: clamp(0.7813rem, 0.7427rem + 0.1927vi, 0.88rem);
+
+
+  --font-size-xsm--line-height: 140%;
+  --font-size-sm--line-height: 140%;
+  --font-size-base--line-height: 130%;
+  --font-size-md--line-height: 130%;
+  --font-size-lg--line-height: 130%;
+  --font-size-xl--line-height: 110%;
+  --font-size-2xl--line-height: 110%;
+  --font-size-3xl--line-height: 100%;
+
+
+    /* spacing */
+    --spacing-3xs: clamp(0.3125rem, 0.2881rem + 0.122vi, 0.375rem);
+    --spacing-2xs: clamp(0.5625rem, 0.5137rem + 0.2439vi, 0.6875rem);
+    --spacing-xs: clamp(0.875rem, 0.8018rem + 0.3659vi, 1.0625rem);
+    --spacing-s: clamp(1.125rem, 1.0274rem + 0.4878vi, 1.375rem);
+    --spacing-m: clamp(1.6875rem, 1.5412rem + 0.7317vi, 2.0625rem);
+    --spacing-l: clamp(2.25rem, 2.0549rem + 0.9756vi, 2.75rem);
+    --spacing-xl: clamp(3.375rem, 3.0823rem + 1.4634vi, 4.125rem);
+    --spacing-2xl: clamp(4.5rem, 4.1098rem + 1.9512vi, 5.5rem);
+    --spacing-3xl: clamp(6.75rem, 6.1646rem + 2.9268vi, 8.25rem);
+    /* min: 16.875* 16 = 270, max: 55 * 16 = 880 */
+    /* 1% de la taille de la zone d'affichage sur l'axe en ligne (inline axis)*/
+    --spacing-body: clamp(16.875rem, 1.997rem + 74.3902vi, 55rem);
+}
+
+html {
+  font-family: var(--font-sans);
+}
+
+.prose {
+  max-width: var(--spacing-body);
+
+  /* max-width */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    max-width: 65ch;
+  }
+  h1 {
+    max-width: 28ch;
+  }
+  h2 {
+    max-width: 33ch;
+  }
+
+  /* margin-bottom */
+  h1 {
+    margin-bottom: var(--spacing-l);
+  }
+  h2 {
+    margin-bottom: var(--spacing-m);
+  }
+  h3 {
+    margin-bottom: var(--spacing-s);
+  }
+  h4 {
+    margin-bottom: var(--spacing-xs);
+  }
+  p {
+    margin-bottom: var(--spacing-2xs);
+  }
+
+  /* font-size */
+  h1 {
+    font-size: var(--font-size-2xl);
+  }
+  h2 {
+    font-size: var(--font-size-xl);
+  }
+  h3{
+    font-size: var(--font-size-lg);
+  }
+  h4{
+    font-size: var(--font-size-md);
+  }
+  body{
+    font-size: var(--font-size-base);
+  }
+  pre {
+    font-size: var(--font-size-sm);
+  }
+}
