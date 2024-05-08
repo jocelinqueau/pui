@@ -21,6 +21,7 @@ type Story = StoryObj<typeof Popover>;
 
 export const Primary: Story = {
   args: {
+    placement: "bottom-start",
     trigger: (
       <Button variant="soft">
       <ChatBubbleIcon width="16" height="16" />
@@ -30,7 +31,7 @@ export const Primary: Story = {
     content: (
       <Flex
         gap="3"
-        className="bg-slate-100 p-4 rounded-md shadow-sm"
+        className="bg-slate-100 p-4 rounded-md shadow-1"
       >
         <Avatar
           size="2"

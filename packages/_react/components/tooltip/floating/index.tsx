@@ -7,9 +7,8 @@ import {
   limitShift,
   useFloating,
   autoUpdate,
+  useHover,
   useInteractions,
-  useDismiss,
-  useClick,
 } from "@floating-ui/react";
 
 export type FloatingPlacement =
@@ -26,44 +25,35 @@ export type FloatingPlacement =
   | "left-start"
   | "left-end";
 
-interface PopoverProps {
+interface TooltipProps {
   trigger: React.ReactNode;
   content: React.ReactNode;
   isVisible?: boolean;
-  /**
-   * spacing is the distance between the trigger/reference and the floating element
-   */
+  withArrow?: boolean;
   spacing?: number;
-
   flip?: boolean;
-  /**
-   * placement is the position of the floating element relative to the reference
-   */
   placement?: FloatingPlacement;
-
-  /**
-   * A callback function that is called when the open state changes
-   */
-  onOpenChange?: (open: boolean) => void;
 }
 
-const Popover = ({
+const Tooltip = ({
   trigger,
   content,
-  placement = "bottom",
   isVisible = false,
+  withArrow = false,
   spacing = 4,
   flip: shouldFlip = true,
-}: PopoverProps) => {
+  placement = "bottom",
+}:TooltipProps) => {
   const [isOpen, setIsOpen] = useState(isVisible);
 
   const middleware = [
     offset(spacing),
     shift({
       limiter: limitShift(),
-      padding: 2,
+      padding: 2
     }),
   ];
+
 
   if (shouldFlip) {
     middleware.push(flip());
@@ -77,13 +67,10 @@ const Popover = ({
     whileElementsMounted: autoUpdate,
   });
 
-  const click = useClick(context);
+  const hover = useHover(context)
 
-  const dismiss = useDismiss(context);
-
-  const { getReferenceProps, getFloatingProps } = useInteractions([
-    click,
-    dismiss,
+  const {getReferenceProps, getFloatingProps} = useInteractions([
+    hover
   ]);
 
   return (
@@ -115,6 +102,6 @@ const Popover = ({
       )}
     </>
   );
-};
+}
 
-export default Popover;
+export default Tooltip;

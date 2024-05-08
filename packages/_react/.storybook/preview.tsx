@@ -4,7 +4,7 @@ import type { Preview } from "@storybook/react";
 
 import { Theme } from "@radix-ui/themes";
 
-import "@/index.css";
+import "../index.css";
 
 const preview: Preview = {
   parameters: {

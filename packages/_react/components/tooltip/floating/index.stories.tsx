@@ -1,10 +1,10 @@
-import { StoryObj } from "@storybook/react";
-import Tooltip from "./index";
-import { ChatBubbleIcon } from "@radix-ui/react-icons";
-import { forwardRef } from "react";
+import { StoryObj } from '@storybook/react';
+import Tooltip from '.'
+import { forwardRef } from 'react';
+import { ChatBubbleIcon } from '@radix-ui/react-icons';
 
 export default {
-  title: "Tooltip/Radix",
+  title: "Tooltip/Floating",
   component: Tooltip,
 };
 
