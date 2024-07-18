@@ -1,0 +1,4 @@
+packages:
+  - 'packages/_react'
+  - 'packages/_svelte'
+  - 'packages/_html'

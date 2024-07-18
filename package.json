@@ -14,8 +14,5 @@
     "storybook:svelte": "npm run -w packages/_svelte storybook",
     "storybook:html": "npm run -w packages/_html storybook"
   },
-  "dependencies": {
-    "open-props": "^1.7.4",
-    "react-resizable-panels": "^2.0.19"
-  }
+  "dependencies": {}
 }
